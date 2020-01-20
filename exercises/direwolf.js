@@ -1,5 +1,4 @@
 class Direwolf {
-  // Think of a constructor as being similar to initialize in Ruby
   constructor(name, home = 'Beyond the Wall', size = 'Massive') {
       this.name              = name;
       this.home              = home;
@@ -29,6 +28,4 @@ class Direwolf {
 
 }
 
-// Notice here we are exporting our class.
-// In order for our test or any other file to be able to know about it we must export it.
 module.exports = Direwolf;

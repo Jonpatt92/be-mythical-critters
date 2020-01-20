@@ -4,26 +4,26 @@ var Human = require('../exercises/human');
 
 describe('Ogre', function() {
 
-  it.skip('should be a function', function() {
+  it('should be a function', function() {
     assert.isFunction(Ogre);
   });
 
-  it.skip('should instantiate our good friend, Ogre', function() {
+  it('should instantiate our good friend, Ogre', function() {
     var ogre = new Ogre();
     assert.isObject(ogre);
   });
 
-  it.skip('should have a name', function() {
+  it('should have a name', function() {
     var ogre = new Ogre('Brak');
     assert.equal(ogre.name, 'Brak');
   });
 
-  it.skip('should live in a Swamp by default', function() {
+  it('should live in a Swamp by default', function() {
     var ogre = new Ogre('Brak');
     assert.equal(ogre.home, 'Swamp');
   });
 
-  it.skip('does not have to live in a swamp', function() {
+  it('does not have to live in a swamp', function() {
     var ogre = new Ogre('Brak', 'The Ritz');
     assert.equal(ogre.home, 'The Ritz');
   });

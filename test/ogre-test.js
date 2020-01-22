@@ -28,7 +28,7 @@ describe('Ogre', function() {
     assert.equal(ogre.home, 'The Ritz');
   });
 
-  it.skip('it can meet humans', function() {
+  it('it can meet humans', function() {
     var ogre = new Ogre('Brak');
     var human = new Human('Jane');
 
@@ -38,7 +38,7 @@ describe('Ogre', function() {
     assert.equal(human.encounterCounter, 1);
   });
 
-  it.skip('humans should only notice an ogre every third encounter', function() {
+  it('humans should only notice an ogre every third encounter', function() {
     var ogre = new Ogre('Brak');
     var human = new Human('Jane');
 
@@ -50,7 +50,7 @@ describe('Ogre', function() {
     assert.equal(human.noticesOgre(), true);
   });
 
-  it.skip('human notices ogre on the sixth encounter', function() {
+  it('human notices ogre on the sixth encounter', function() {
     var ogre = new Ogre('Brak');
     var human = new Human('Jane');
 
@@ -69,7 +69,7 @@ describe('Ogre', function() {
     assert.equal(human.noticesOgre(), true);
   });
 
-  it.skip('can swing a club', function() {
+  it('can swing a club', function() {
     var ogre = new Ogre('Brak');
     var human = new Human('Jane');
 
@@ -78,7 +78,7 @@ describe('Ogre', function() {
     assert.equal(ogre.swings, 1);
   });
 
-  it.skip('ogre swings the club when a human notices it', function() {
+  it('ogre swings the club when a human notices it', function() {
     var ogre = new Ogre('Brak');
     var human = new Human('Jane');
 
@@ -92,7 +92,7 @@ describe('Ogre', function() {
     assert.equal(ogre.swings, 1);
   });
 
-  it.skip('ogre hits human every second time it swings', function() {
+  it('ogre hits human every second time it swings', function() {
     var ogre = new Ogre('Brak');
     var human = new Human('Jane');
 
@@ -108,10 +108,18 @@ describe('Ogre', function() {
     assert.equal(human.knockedOut, true);
   });
 
-  it.skip('human wakes up when ogre apologizes', function() {
+  it('human wakes up when ogre apologizes', function() {
     var ogre = new Ogre('Brak');
     var human = new Human('Jane');
 
+    ogre.encounter(human);
+    ogre.encounter(human);
+    ogre.encounter(human);
+    ogre.encounter(human);
+    ogre.encounter(human);
+    ogre.encounter(human);
+
+    assert.equal(human.knockedOut, true);
     ogre.apologize(human);
     assert.equal(human.knockedOut, false);
   });

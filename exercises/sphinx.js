@@ -16,10 +16,8 @@ class Sphinx {
 
   attemptAnswer(answer) {
     var solvedRiddles = 0
-
     this.riddles.forEach(function(riddle) {
-      var correct_answer = riddle['answer'];
-      if (correct_answer === answer) {
+      if (riddle['answer'] === answer) {
         var index = this.riddles.indexOf(riddle);
         this.riddles.splice(index, 1);
         solvedRiddles += 1

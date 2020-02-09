@@ -15,7 +15,7 @@ class Stark {
   }
 
   houseWords(){
-    if(this.safe === false){
+    if (this.safe === false) {
       return 'Winter is Coming';
     } else if(this.safe === true){
       return 'The North Remembers';
